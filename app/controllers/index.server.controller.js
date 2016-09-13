@@ -5,6 +5,7 @@ exports.render = function(req, res){
     req.session.lastVisit = new Date();
 
     res.render('index', {
-        title: 'Articles'
+        title: 'Articles',
+        user: JSON.stringify(req.user)
     });
 };
